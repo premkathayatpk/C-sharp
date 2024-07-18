@@ -1,13 +1,25 @@
 using System;
 class PrimeNum{
   static void Main(){
-    int i;
-    for(i=100;i<=200;i++){
-      for(i=2;i*i<=num;i++){
-        if(num%i==0){
-Console.WriteLine(i);
+    int num;
+    for(num=100;num<=200;num++){
+      if(isPrime(num)){
+        Console.Write(num+" ");
+      }
         }
       }
+      static bool isPrime(int n){
+      if(n<=1){
+        return false;
+      }
+      for(int i=2;i<n;i++){
+        if(n%i==0){
+          return false;
+        }
+      }
+      return true;
+      }
     }
-  }
-}
+   
+    
+  
